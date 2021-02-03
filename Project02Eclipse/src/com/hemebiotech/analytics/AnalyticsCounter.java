@@ -22,6 +22,11 @@ public class AnalyticsCounter {
 		
 		SymptomCounter DictionaryOfSymptoms = new SymptomCounter();
 		HashMap<String, Integer> occurencesCounter = DictionaryOfSymptoms.countTheOccurencesOf(allSymptoms);
-		System.out.println(occurencesCounter);
+//		System.out.println(occurencesCounter);
+		SortKey keySorting  = new SortKey();
+		HashMap<String, Integer> sortKey = keySorting.sortHashMapByKey(occurencesCounter);
+//		System.out.println(sortKey);
 	}
+
+	
 }
