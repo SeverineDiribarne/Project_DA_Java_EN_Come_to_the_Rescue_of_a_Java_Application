@@ -1,29 +1,32 @@
 package com.hemebiotech.analytics;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Symptom Counter class
+ * Class Symptom Counter : class which counts the occurrences of the list of symptoms entered 
+ * as a parameter of the method.
  * @author Sèverine
- * @version 1.0
+ * creation date : 29.01.21
  */
 public class SymptomCounter {
 
 	private HashMap<String, Integer> symptomsDictionary;
 
 	/**
-	 * class constructor
+	 * Constructor
 	 */
 	public SymptomCounter() {
 		this.symptomsDictionary = new HashMap<>();
 	}
 
 	/**
-	 * Count occurences of List allSymptoms
-	 * @param allSymptoms
-	 * @return Symptoms Dictionary
+	 * Method that counts the number of occurrences of each symptom and adds them 
+	 * to a dictionary (key / value)
+	 * @param allSymptoms list.
+	 * @return the full symptom dictionary.
 	 */
-	public HashMap<String, Integer> countTheOccurencesOf(List<String> allSymptoms) {
+	public Map<String, Integer> countTheOccurencesOf(List<String> allSymptoms) {
 
 		for (String element : allSymptoms) {
 			
