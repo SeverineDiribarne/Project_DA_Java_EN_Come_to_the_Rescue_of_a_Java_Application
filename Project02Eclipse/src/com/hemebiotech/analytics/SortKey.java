@@ -1,33 +1,34 @@
 package com.hemebiotech.analytics;
 
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-
+/**
+ * Class SortKey : class which sorts in alphabetical order the dictionary keys taken as a parameter
+ * of the constructor.
+ * @author Sèverine
+ * creation date : 03.02.21
+ */
 
 public class SortKey{
 	
-	private HashMap<String, Integer> sortHashMap;
+	private Map<String, Integer> sortHashMap;
 
 	/**
-	 * class constructor
+	 * Constructor
+	 * @param occurencesCounter Map
 	 */
-	public SortKey() {
-		this.sortHashMap = new HashMap<>();
+	public SortKey(Map<String, Integer> occurencesCounter) {
+		this.sortHashMap = occurencesCounter;
 	}
 
-	public HashMap<String,Integer>sortHashMapByKey(HashMap<String, Integer> symptomsDictionary){
+	/**
+	 * method which takes the Map of the occurrences counted as input by the constructor
+	 * and which returns the sorted Map on output.
+	 * @return sorting the Map
+	 */
+	public Map<String,Integer> sortMapByKey(){
 								
-		HashMap<String, Integer>sortHashmap = symptomsDictionary;
-		Map<String,Integer>map = new TreeMap<String,Integer>(sortHashmap);
-		Set set = map.entrySet();
-		Iterator iterator = set.iterator();
-		while(iterator.hasNext()) {
-			Map.Entry<String, Integer> entry = (Map.Entry<String, Integer>) iterator.next();
-			System.out.println(entry.getKey() + " = " + entry.getValue());
-		}
-		return sortHashmap;
+		Map<String,Integer>map = new TreeMap<String,Integer>(sortHashMap);
+		return map;
 	}
 }

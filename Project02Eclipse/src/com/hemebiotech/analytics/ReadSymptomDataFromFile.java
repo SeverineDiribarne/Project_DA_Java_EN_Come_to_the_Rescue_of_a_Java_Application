@@ -7,14 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ * Class ReadSymptomDataFromFile implemented by the interface : class which contains 
+ * the method of reading the text file and which adds the contents of this text file 
+ * in an ArrayList.
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	/**
-	 * method that gets the reading of a text file and writes it to an ArrayList
+	 * method that gets the reading of a text file and writes it to an ArrayList.
 	 * @param Reader
-	 * @return all symptoms collected in an ArrayList
+	 * @return all symptoms collected in an ArrayList.
 	 */
 	@Override
 	public List<String> getSymptomsFrom(Reader reader) {
