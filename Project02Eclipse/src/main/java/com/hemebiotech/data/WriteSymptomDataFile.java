@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package main.java.com.hemebiotech.data;
 
 import java.io.FileWriter;
 import java.util.Map;
